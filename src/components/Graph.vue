@@ -1,11 +1,16 @@
 <template>
   <div>
-    <graph-bar
-            :height="400"
-            :labels="labels"
-            :values="points"
-            :colors="colors">
-    </graph-bar>
+    <header class="mt-2 text-center">
+      <h2 class="font-semibold text-lg">{{ value.question }}</h2>
+    </header>
+    <div v-if="points.length > 0">
+      <graph-bar
+              :height="400"
+              :labels="labels"
+              :values="points"
+              :colors="colors">
+      </graph-bar>
+    </div>
   </div>
 </template>
 

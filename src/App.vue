@@ -4,13 +4,13 @@
       <h1 class="font-bold text-3xl tracking-wide uppercase">Quick Poll</h1>
     </header>
     <div class="container mx-auto flex flex-wrap justify-center text-gray-700 md:px-4">
-      <Card>
+      <Card classes="md:w-1/2 lg:w-1/3">
         <Question v-model="pollQuestion" />
       </Card>
-      <Card>
+      <Card classes="md:w-1/2 lg:w-1/3">
         <Vote v-model="pollQuestion" />
       </Card>
-      <Card>
+      <Card classes="lg:w-1/3">
         <Graph v-model="pollQuestion" />
       </Card>
     </div>
@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style>
+body {
+  word-break: break-word;
+}
 .bg-gradient {
 
   background: #11998e; /* fallback for old browsers */

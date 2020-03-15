@@ -2,18 +2,22 @@
   <div class="flex flex-col h-full">
     <div class="pb-6">
       <input 
-        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full p-2 font-medium text-gray-700 focus:outline-none"
+        class="appearance-none border-2 border-gray-200 rounded w-full p-2 font-medium focus:outline-none"
+        :class="value.question.length < 80 ? 'bg-gray-200 text-gray-700' : 'bg-gray-100 text-gray-400'"
         v-model="value.question"
         type="text"
         placeholder="Add your question"
+        maxlength="80"
       >
     </div>
     <div class="mb-3 flex items-center" v-for="(option, index) in value.options" :key="index">
       <input 
-        class="bg-gray-200 appearance-none border-2 border-gray-200 rounded text-md w-full py-1 px-2 text-gray-700 focus:outline-none"
-        type="text"
+        class="appearance-none border-2 border-gray-200 rounded text-md w-full py-1 px-2 focus:outline-none"
+        :class="option.answer.length < 80 ? 'bg-gray-200 text-gray-700' : 'bg-gray-100 text-gray-400'"
         v-model="option.answer"
+        type="text"
         placeholder="Add another option"
+        maxlength="80"
       >
       <button 
         @click="addOption(index)" v-if="index === value.options.length - 1 && value.options.length <= 9"
@@ -33,7 +37,7 @@
       </button>
     </div>
     <div class="mt-auto flex flex-wrap justify-between items-center">
-      <p>{{ value.options.length + '/10 possible answers' }}</p>
+      <p>{{ value.options.filter(option => option.answer).length + '/10 possible answers' }}</p>
       <button @click="reset()" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold mt-2 py-2 px-4 rounded-lg focus:outline-none">
         Reset
       </button>
