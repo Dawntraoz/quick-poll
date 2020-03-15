@@ -1,6 +1,9 @@
 # quick-poll
 
 ## Project setup
+First install Node.js (https://nodejs.org/) and open the command line.
+
+Run:
 ```
 npm install
 ```

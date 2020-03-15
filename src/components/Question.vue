@@ -16,7 +16,7 @@
         :class="option.answer.length < 80 ? 'bg-gray-200 text-gray-700' : 'bg-gray-100 text-gray-400'"
         v-model="option.answer"
         type="text"
-        placeholder="Add another option"
+        placeholder="Add option"
         maxlength="80"
       >
       <button 
