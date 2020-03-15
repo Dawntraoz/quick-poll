@@ -16,9 +16,7 @@
     "tailwindcss": "^1.2.0",
     "vue-graph": "^0.8.7",
     "vue-template-compiler": "^2.6.11",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
+    "vue": "^2.6.11",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "babel-eslint": "^10.0.3",
