@@ -1,5 +1,7 @@
 # quick-poll
 
+Demo https://quick-poll-vue.herokuapp.com/
+
 ## Project setup
 First install Node.js (https://nodejs.org/) and open the command line.
 
